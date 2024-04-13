@@ -92,7 +92,6 @@ class Maze:
     def remove_walls(self, current_cell: Cell, next_cell: Cell) -> None:
         dx = current_cell.x - next_cell.x
         dy = current_cell.y - next_cell.y
-        print(dx, dy)
         if dx == 1:
             current_cell.walls['left'] = False
             next_cell.walls['right'] = False
@@ -126,7 +125,6 @@ class Maze:
                 cell.draw()
 
 m = Maze()
-current_cell = m.cells[0][0]
 
 while True:
     screen.fill(pygame.Color('black'))
